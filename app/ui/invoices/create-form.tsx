@@ -10,6 +10,7 @@ import {
 import { Button } from '@/app/ui/button';
 import { createInvoice, State } from '@/app/lib/actions'; // Import the createInvoice action
 import { useActionState } from 'react';
+import { CancelInvoice } from './buttons';
 
 export default function Form({ customers }: { customers: CustomerField[] }) {
   const initialState: State = { message: null, errors: {} };
@@ -134,12 +135,7 @@ export default function Form({ customers }: { customers: CustomerField[] }) {
         </div>
       </div>
       <div className="mt-6 flex justify-end gap-4">
-        <Link
-          href="/dashboard/invoices"
-          className="flex h-10 items-center rounded-lg bg-gray-100 px-4 text-sm font-medium text-gray-600 transition-colors hover:bg-gray-200"
-        >
-          Cancel
-        </Link>
+        <CancelInvoice/>
         <Button type="submit">Create Invoice</Button>
       </div>
     </form>

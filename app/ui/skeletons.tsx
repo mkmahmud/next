@@ -1,3 +1,5 @@
+import styles from './skeletons.module.css';
+
 // Loading animation
 const shimmer =
   'before:absolute before:inset-0 before:-translate-x-full before:animate-[shimmer_2s_infinite] before:bg-gradient-to-r before:from-transparent before:via-white/60 before:to-transparent';
@@ -213,6 +215,16 @@ export function InvoicesTableSkeleton() {
           </table>
         </div>
       </div>
+    </div>
+  );
+}
+
+
+export function LoadingSkeleton() {
+  return (
+    <div className="flex items-center justify-center h-16 ">
+      <div className={`custom-spin rounded-full h-6 w-6 border-4 border-gray-300 border-t-transparent ${styles.customSpin}`}></div>
+
     </div>
   );
 }
